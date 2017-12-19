@@ -49,7 +49,7 @@ public class PruebaFechas {
             System.out.println("");
         }
         DateTimeFormatter fmt=DateTimeFormatter.ofPattern("dd/MM/YYYY");
-        LocalDate fechanac=LocalDate.parse("22/10/1998", fmt);
+            LocalDate fechanac=LocalDate.parse("22/10/1998", fmt);
         LocalDate ahora=LocalDate.now();
         
         Period periodo=Period.between(fechanac, ahora);
