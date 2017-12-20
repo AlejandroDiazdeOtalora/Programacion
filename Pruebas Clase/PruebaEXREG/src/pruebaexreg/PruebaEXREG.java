@@ -20,6 +20,9 @@ public class PruebaEXREG {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        mes();
+    }
+    public static void anio(){
         boolean ok=false;
         String anio;
         while(!ok){
@@ -29,6 +32,19 @@ public class PruebaEXREG {
                     throw new NullPointerException();
             }catch(NullPointerException e){
                 System.out.println("Petose");
+            }
+        }
+    }
+    public static void mes(){
+        boolean ok=false;
+        String mes;
+        while (ok==false){  
+            try{
+            mes=JOptionPane.showInputDialog(null, "Introduce el mes de nacimiento"); 
+            if(mes.isEmpty()||validar(mes,"^[1-9]{1}|[1-9]{1}[0-2]{1}$")==false)
+                throw new NullPointerException();                        
+            }catch (NullPointerException e){
+                JOptionPane.showMessageDialog(null, e.getMessage());
             }
         }
     }

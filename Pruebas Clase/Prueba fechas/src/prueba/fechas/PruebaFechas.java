@@ -32,8 +32,8 @@ public class PruebaFechas {
         System.out.println(fechahoy);
                 
         try{
-            String CadenaFecha="9/1/2017";
-            SimpleDateFormat regex=new SimpleDateFormat("dd/mm/yyyy");
+            String CadenaFecha="9/10/2017";
+            SimpleDateFormat regex=new SimpleDateFormat("dd/MM/yyyy");
             fecha2 = regex.parse(CadenaFecha);
             System.out.println(fecha2);
         }catch(ParseException e){
@@ -49,7 +49,7 @@ public class PruebaFechas {
             System.out.println("");
         }
         DateTimeFormatter fmt=DateTimeFormatter.ofPattern("dd/MM/YYYY");
-            LocalDate fechanac=LocalDate.parse("22/10/1998", fmt);
+        LocalDate fechanac=LocalDate.parse("22/10/1998", fmt);
         LocalDate ahora=LocalDate.now();
         
         Period periodo=Period.between(fechanac, ahora);
